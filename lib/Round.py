@@ -25,8 +25,9 @@ class Round:
         if new_turn.correct():
             self.number_correct += 1
             self.cat_dictio[new_turn.card.category] += 1
-        index = self.deck.cards.index(self.current_card)
-        self.current_card = self.deck.cards[index + 1]
+        if self.current_card != self.deck.cards[-1]:
+            index = self.deck.cards.index(self.current_card)
+            self.current_card = self.deck.cards[index + 1]
         return new_turn
 
 
