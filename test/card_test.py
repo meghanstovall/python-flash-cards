@@ -21,9 +21,6 @@ class TestCard(unittest.TestCase):
         self.assertEqual(card.category, "Geography")
 
 
-
-
-
 if __name__ == "__main__":
 
     suite = unittest.TestSuite()
